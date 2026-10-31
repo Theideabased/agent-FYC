@@ -1,0 +1,14 @@
+{
+  "name": "customer-insider",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "validate": "node scripts/validate-artifact.mjs",
+    "dev": "node --watch server.mjs",
+    "test": "node tests/app.test.mjs",
+    "db:generate": "node scripts/generate-migration.mjs",
+    "env:check": "node scripts/check-env.mjs",
+    "telegram:chats": "node scripts/telegram-chats.mjs"
+  }
+}

@@ -1,0 +1,12 @@
+dist/
+site.tar.gz
+.env
+.env.*
+!.env.example
+*.pdf
+dist/
+node_modules/
+.data/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal

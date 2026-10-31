@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1793221200000,
+      "tag": "0000_submissions",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1793283013863,
+      "tag": "0001_contacts_gemini",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1793367060287,
+      "tag": "0002_delivery_integrations",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1793381755143,
+      "tag": "0003_brevo_contact_lists",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1793467309864,
+      "tag": "0004_email_plan_requests",
+      "breakpoints": true
+    }
+  ]
+}

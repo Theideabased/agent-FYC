@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Pager</title>
+  <style>
+    :root { --ink:#365367; --body:#384a43; --green:#c0d36c; --pale:#f5f6e9; --rule:#a7b7bc; }
+    * { box-sizing:border-box; }
+    body { margin:0; padding:16px; background:#f0f1f5; font-family:Arial,Helvetica,sans-serif; color:var(--body); }
+    .page { width:794px; max-width:100%; min-height:1052px; margin:auto; background:#fff; border-radius:16px 16px 0 0; overflow:hidden; }
+    .banner { height:242px; background:var(--pale); display:flex; align-items:center; justify-content:space-between; padding:0 62px 0 70px; }
+    h1 { margin:0; font-size:88px; font-weight:400; letter-spacing:-5px; color:var(--ink); white-space:nowrap; }
+    .symbol { width:246px; height:242px; flex-shrink:0; margin-left:26px; }
+    main { padding:39px 33px 58px; }
+    h2 { margin:0; font-size:29px; line-height:1.25; letter-spacing:-1px; color:var(--ink); }
+    .section-heading { padding-bottom:6px; border-bottom:2px solid #edf1d6; }
+    .overview { margin:14px 0 12px; font-size:13px; line-height:1.5; }
+    table { width:100%; border-collapse:collapse; table-layout:fixed; font-size:13px; line-height:1.55; }
+    th, td { text-align:left; vertical-align:top; }
+    .approval col:first-child { width:19%; }
+    .approval th { color:var(--ink); font-size:13px; padding:3px 9px 7px; border-bottom:2px solid var(--rule); }
+    .approval td { padding:11px 9px 8px; }
+    .approval .check { text-align:center; color:var(--green); font-size:36px; line-height:1.2; font-weight:400; }
+    .approval .sample { font-size:12px; font-style:italic; }
+    .summary { margin-top:16px; }
+    .summary h2 { margin-bottom:18px; }
+    .details col:first-child { width:29%; }
+    .details tr { border-top:2px solid var(--rule); }
+    .details tr:last-child { border-bottom:2px solid var(--rule); }
+    .details th { padding:7px 9px; font-size:13px; color:var(--ink); font-weight:700; }
+    .details td { padding:7px 9px 6px; }
+    .prompt { margin:0; font-size:12px; font-weight:700; }
+    ul { margin:13px 0 2px; padding-left:29px; }
+    li { padding-left:0; }
+    .resources { margin-top:30px; }
+    [contenteditable="true"]:focus { outline:2px solid var(--green); outline-offset:4px; }
+    .resource-content { min-height:25px; margin-top:10px; font-size:13px; }
+    @media (max-width:650px) {
+      body { padding:8px; }
+      .page { min-height:100vh; border-radius:10px 10px 0 0; }
+      .banner { height:auto; min-height:140px; padding:12px 22px; gap:12px; }
+      h1 { font-size:clamp(36px,10vw,70px); letter-spacing:-2px; }
+      .symbol { width:30%; height:auto; margin:0; }
+      main { padding:28px 22px; }
+      h2 { font-size:24px; }
+      .details col:first-child { width:32%; }
+      .details th { font-size:11px; overflow-wrap:break-word; }
+    }
+    @media print {
+      @page { size:A4; margin:0; }
+      body { padding:0; background:white; print-color-adjust:exact; -webkit-print-color-adjust:exact; }
+      .page { width:100%; min-height:0; border-radius:0; }
+      [contenteditable="true"]:focus { outline:none; }
+    }
+  </style>
+</head>
+<body>
+  <article class="page" aria-label="One-page meeting summary">
+    <header class="banner">
+      <h1 contenteditable="true" spellcheck="false">One Pager</h1>
+      <svg class="symbol" viewBox="0 0 246 242" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g stroke="#c0d36c" stroke-width="9">
+          <circle cx="123" cy="80" r="72" />
+          <circle cx="164" cy="121" r="72" />
+          <circle cx="123" cy="162" r="72" />
+          <circle cx="82" cy="121" r="72" />
+        </g>
+      </svg>
+    </header>
+    <main>
+      <section aria-labelledby="overview-heading">
+        <h2 class="section-heading" id="overview-heading">Overview</h2>
+        <p class="overview" contenteditable="true">What is the session about? What is the purpose? Who participated? Use these guide questions to create an informed overview of your one-pager document.</p>
+        <table class="approval" aria-label="Approval">
+          <colgroup><col><col></colgroup>
+          <thead><tr><th scope="col">APPROVED</th><th scope="col">NAME</th></tr></thead>
+          <tbody><tr><td class="check" aria-label="Approved">&#10003;</td><td class="sample" contenteditable="true">Nadine Philips: Create more in your Canva Doc. Just hit the plus button and select the kind of content you want to add to your document.</td></tr></tbody>
+        </table>
+      </section>
+      <section class="summary" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Summary</h2>
+        <table class="details" aria-label="Session summary">
+          <colgroup><col><col></colgroup>
+          <tbody>
+            <tr><th scope="row">KEY INFORMATION</th><td contenteditable="true"><p class="prompt">Write the key details of the session</p><ul><li>Indicate relevant highlights</li><li>Add additional information</li></ul></td></tr>
+            <tr><th scope="row">BLOCKERS</th><td contenteditable="true"><p class="prompt">Write a blocker for the team, if any</p><ul><li>Provide context for your team</li></ul></td></tr>
+            <tr><th scope="row">NEXT STEPS</th><td contenteditable="true"><p class="prompt">Write an action item that will move the team forward</p><ul><li>Assign a point person to the task</li></ul></td></tr>
+            <tr><th scope="row">SUPPORT NEEDED</th><td contenteditable="true"><p class="prompt">Write any support required</p><ul><li>Insert a date when it is needed</li></ul></td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="resources" aria-labelledby="resources-heading">
+        <h2 class="section-heading" id="resources-heading">Relevant Resources</h2>
+        <div class="resource-content" contenteditable="true" aria-label="Add relevant resources"></div>
+      </section>
+    </main>
+  </article>
+</body>
+</html>

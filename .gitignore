@@ -1,0 +1,12 @@
+# Local credentials and customer records must stay on this machine.
+.env
+.env.*
+!.env.example
+**/.data/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Generated output and dependencies.
+**/node_modules/
+**/dist/

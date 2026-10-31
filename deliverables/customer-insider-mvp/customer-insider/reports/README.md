@@ -1,0 +1,14 @@
+# Report sources
+
+- `business-template.html` is the owner's original `deliverables/one-pager.html`, unchanged as the visual reference.
+- `business-prompt.js` contains the approved business-plan instructions. Gemini returns structured content; the app safely applies it to the template and saves the internal HTML preview in `report_json`. Only the finished PDF is emailed or offered for download.
+- `business.js` shares layout measurements between the HTML preview/export and the server/browser PDF formatter. Helvetica AFM character advances keep body text at 11pt. Content that cannot fit A4 is rejected, then generation is retried once with fewer words. The seven business sections and all three actions are required. Resource links are omitted because no resource-verification tool is available during generation.
+- `learning-guide.js` embeds the exact supplied `sales_automation_8_step_guide.pdf` as base64. It is served as a PDF download and the only attachment in learner emails. Learners do not need a Gemini-generated report. The original guide's design and tall page size are preserved; the A4 layout rules apply to the personalized business document.
+
+The current business plan is regenerated once on the next plan request when an older six-section business report is cached. Saved answers, contact details and conversation history remain intact. No database migration is required.
+
+## Sales advice and statistics
+
+The prompt asks for a proposed buyer segment, example outreach message, follow-up routine and buying next step when the supplied answers support them. Missing offer/customer details are flagged instead of inferred. Operations or finance problems are addressed first when those are the real blocker. The website creates advice; it does not run daily follow-ups or close sales.
+
+`approvedSalesStatistics` in `business.js` contains three observations checked against [Salesforce’s original State of Sales, seventh edition](https://www.salesforce.com/en-us/wp-content/uploads/sites/4/documents/reports/sales/salesforce-state-of-sales-report-2026.pdf), pages 3 and 8, on 2026-10-30. The vendor survey covered 4,050 sales professionals in 22 countries during August–September 2025. The model selects an approved ID or none. The server inserts the exact wording and source into the blockers section only when the visitor’s critical context supports the topic. These observations are general survey context, not Nigerian business benchmarks or forecasts of the visitor’s results. Other model-authored numeric percentages are rejected unless supplied by the visitor. Suggested counts and timing are explicitly test targets. No live web research or arbitrary model-selected statistics are used during generation. New reports use these instructions; saved reports remain consistent with their original downloads and emails.
